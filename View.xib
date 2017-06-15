@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="btnView">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEe-qd-D8r">
+                    <rect key="frame" x="142" y="105" width="79" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="change"/>
+                    <connections>
+                        <action selector="clickBtnChangeViewColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="AUk-WL-0bt"/>
+                    </connections>
+                </button>
+                <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="sousuo" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYa-k1-Psv">
+                    <rect key="frame" x="8" y="27" width="235" height="44"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="hbq-H4-fcH"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kEe-qd-D8r" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="142" id="Hn9-jZ-eeg"/>
+                <constraint firstAttribute="trailing" secondItem="kEe-qd-D8r" secondAttribute="trailing" constant="166" id="PVQ-tC-VSz"/>
+                <constraint firstAttribute="bottom" secondItem="kEe-qd-D8r" secondAttribute="bottom" constant="101" id="WLW-EH-z76"/>
+                <constraint firstItem="kEe-qd-D8r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="105" id="kBB-Qu-w1j"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="235" y="415"/>
+        </view>
+        <searchDisplayController id="jZb-qK-5up"/>
+    </objects>
+</document>
